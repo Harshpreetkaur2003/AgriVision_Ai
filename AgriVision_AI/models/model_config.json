@@ -1,0 +1,10 @@
+{
+    "model_name": "MobileNetV2",
+    "image_size": [
+        224,
+        224
+    ],
+    "num_classes": 15,
+    "preprocessing": "mobilenet_v2.preprocess_input",
+    "class_mapping": "class_indices.json"
+}

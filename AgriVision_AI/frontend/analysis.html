@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaf Analysis | AgriVision AI</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <a href="/" class="logo">🌿 AgriVision AI</a>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/analysis">Leaf Analysis</a>
+    </nav>
+</header>
+
+<main class="analysis-container">
+
+    <h1>Analyse Your Plant Leaf</h1>
+
+    <p class="subtitle">
+        Upload a clear photograph of your plant leaf to begin AI-powered disease detection.
+    </p>
+
+    <div class="upload-card">
+
+        <label for="crop">Select Crop</label>
+
+        <select id="crop">
+            <option value="tomato">Tomato</option>
+            <option value="potato">Potato</option>
+            <option value="pepper">Pepper / Bell Pepper</option>
+            <option value="other">Other</option>
+        </select>
+
+        <div class="upload-area">
+
+            <input
+                type="file"
+                id="leafImage"
+                accept="image/png,image/jpeg,image/webp"
+                hidden
+            >
+
+            <div class="upload-icon">📷</div>
+
+            <h3>Upload Leaf Photograph</h3>
+
+            <p>JPG, PNG or WEBP (Maximum 10 MB)</p>
+
+            <button
+                class="primary-btn"
+                type="button"
+                id="chooseImageBtn"
+            >
+                Choose Image
+            </button>
+
+            <img
+                id="preview"
+                alt="Uploaded leaf preview"
+                style="display:none; max-width:100%; max-height:300px; margin:20px auto; border-radius:12px;"
+            >
+
+            <p id="fileName" aria-live="polite"></p>
+
+        </div>
+
+        <button id="analyzeBtn" class="primary-btn full-btn" type="button">
+            Analyse Leaf
+        </button>
+
+        <div
+            id="result"
+            class="result-box"
+            role="status"
+            aria-live="polite"
+            style="display:none;"
+        ></div>
+
+    </div>
+
+</main>
+
+<script src="/static/js/analysis.js"></script>
+
+</body>
+</html>

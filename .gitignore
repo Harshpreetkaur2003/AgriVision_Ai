@@ -1,0 +1,15 @@
+
+.venv/
+__pycache__/
+*.pyc
+.env
+.vscode/
+
+uploads/*
+!uploads/.gitkeep
+
+dataset/*
+models/*
+
+.ipynb_checkpoints/
+*.log
